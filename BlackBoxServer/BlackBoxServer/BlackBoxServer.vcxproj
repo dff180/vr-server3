@@ -147,12 +147,14 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -171,11 +173,6 @@
     <ClInclude Include="wiimote_state.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\pymanymouse-master\linux_evdev.c" />
-    <ClCompile Include="..\..\..\pymanymouse-master\macosx_hidmanager.c" />
-    <ClCompile Include="..\..\..\pymanymouse-master\macosx_hidutilities.c" />
-    <ClCompile Include="..\..\..\pymanymouse-master\windows_wminput.c" />
-    <ClCompile Include="..\..\..\pymanymouse-master\x11_xinput2.c" />
     <ClCompile Include="BlackBoxServer.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
